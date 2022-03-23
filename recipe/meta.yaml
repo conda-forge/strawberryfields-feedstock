@@ -1,5 +1,5 @@
 {% set name = "strawberryfields" %}
-{% set version = "0.21.0" %}
+{% set version = "0.22.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/StrawberryFields-{{ version }}.tar.gz
-  sha256: 581b70a4c421cfce752a82ac99e2dd190f6dc3c2c728261cd426462c1fd8f786
+  sha256: 53be0a37d1280aa02d115fb2c75ed80de7ef1507c94e7b253d0d61b4f9719bac
 
 build:
   number: 0
@@ -20,7 +20,6 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - appdirs
     - networkx >=2.0
     - numba
     - numpy >=1.17.4
