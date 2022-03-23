@@ -20,7 +20,6 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - appdirs
     - networkx >=2.0
     - numba
     - numpy >=1.17.4
