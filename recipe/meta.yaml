@@ -1,5 +1,5 @@
 {% set name = "strawberryfields" %}
-{% set version = "0.22.0" %}
+{% set version = "0.23.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/StrawberryFields-{{ version }}.tar.gz
-  sha256: 53be0a37d1280aa02d115fb2c75ed80de7ef1507c94e7b253d0d61b4f9719bac
+  sha256: bfe94867cdee8e2904752573f1ff46b78d9f373da16a1cfa31e1bd6cdf2e3cb0
 
 build:
   number: 0
@@ -33,7 +33,7 @@ requirements:
     - thewalrus >=0.18.0
     - toml
     - urllib3 >=1.25.3
-    - xanadu-cloud-client >=0.1.1
+    - xanadu-cloud-client >=0.2.1
 
 test:
   imports:
