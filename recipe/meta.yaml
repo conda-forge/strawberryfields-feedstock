@@ -7,23 +7,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/StrawberryFields-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/StrawberryFields-{{ version }}.tar.gz
   sha256: bfe94867cdee8e2904752573f1ff46b78d9f373da16a1cfa31e1bd6cdf2e3cb0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - networkx >=2.0
     - numba
     - numpy >=1.17.4
-    - python >=3.6
+    - python >={{ python_min }}
     - python-dateutil >=2.8.0
     - quantum-blackbird >=0.3.0
     - quantum-xir >=0.1.1
@@ -43,6 +43,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://strawberryfields.ai
